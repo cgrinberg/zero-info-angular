@@ -1,0 +1,21 @@
+@import "../../../../styles/base";
+
+:host {
+  border: 1px solid $main-border-color;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hierarchy-content{
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.link-button {
+  color: blue;
+  text-decoration: underline
+}

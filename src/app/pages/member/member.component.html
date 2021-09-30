@@ -1,0 +1,44 @@
+<zi-nav-bar></zi-nav-bar>
+
+<div class="info-container">
+  <div class="left-column" [ngClass]="isAuthorized ? 'left-column-min-values' : 'left-column'">
+    <zi-button class="back-btn" (click)="backButtonClick()">
+      Back
+    </zi-button>
+  </div>
+  <div [ngClass]="isAuthorized ? 'right-column-min-values' : 'right-column'">
+    <div *ngIf="showLoader">
+      <zi-loader></zi-loader>
+    </div>
+
+    <p *ngIf="!isAuthorized && !showLoader">
+      Oops, you are not authorized to see this member's details. Please go back to the main page and try somebody else.
+    </p>
+    <div *ngIf="isAuthorized && !showLoader">
+      <div>
+        <div class="person-container">
+          <img [src]="resolveImageSrc()" class="person-image" alt="person image"/>
+          <div> {{activeMemberDetails?.id}} - {{activeMemberDetails?.name}} </div>
+        </div>
+      </div>
+      <div class="description-container">
+        <p [innerHTML]="activeMemberDetails?.description"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!--  <div class="container-top">-->
+<!--    <h1 class="header" *ngIf="!isAuthorized && !showLoader">-->
+<!--      UNAUTHORIZED-->
+<!--    </h1>-->
+<!--  </div>-->
+<!--  <div class="container-bottom" *ngIf="isAuthorized && !showLoader">-->
+
+<!--  </div>-->
+
+
+
+

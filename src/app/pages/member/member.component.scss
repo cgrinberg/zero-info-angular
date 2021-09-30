@@ -1,0 +1,70 @@
+@import '../../../styles/base';
+
+.info-container {
+  display: flex;
+  margin: 5% 7% 0 7%;
+  padding: 0 5%;
+  align-content: flex-start;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.left-column-min-values {
+  max-width: 10%;
+  margin-bottom: 40px;
+  min-width: 80px;
+  min-height: 250px;
+}
+
+.left-column {
+  max-width: 10%;
+  margin-bottom: 40px;
+  min-width: 80px;
+}
+
+.right-column{
+  position: relative;
+  border: 1px solid $main-border-color;
+  padding: 2% 2% 2% 2%;
+}
+
+.right-column-min-values {
+  position: relative;
+  min-height: 250px;
+  min-width: 100%;
+  border: 1px solid $main-border-color;
+  padding: 2% 2% 2% 2%;
+}
+
+.person-container {
+  vertical-align: top;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3%;
+
+  .person-image {
+    max-width: 15%;
+    max-height: 15%;
+    border: 1px solid $main-border-color;
+  }
+
+
+  .description-container {
+    padding-top: 5%;
+
+  }
+
+}
+
+
+:host {
+  overflow: auto;
+  margin-top: $distance-from-nav-bar;
+}
+
+
+
+
+
+

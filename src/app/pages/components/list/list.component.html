@@ -1,0 +1,29 @@
+<div class="list">
+
+  <div class="list-header">
+    <p>{{headerText}}</p>
+  </div>
+
+  <div *ngIf="!showLoader && !items.length">
+    Empty State
+  </div>
+  <div class="list-items">
+    <div *ngIf="showLoader">
+      <zi-loader></zi-loader>
+    </div>
+    <ng-container *ngIf="!showLoader">
+      <div class="item"
+           *ngFor="let item of items"
+           (click)="selectItem(item)"
+           [ngClass]="{'selected': item.id == selectedItem.id}">
+        {{item.label}}
+      </div>
+    </ng-container>
+  </div>
+
+
+  <ng-content select="[below_list]"></ng-content>
+
+</div>
+
+

@@ -1,0 +1,9 @@
+<div class="hierarchy-content">
+  <h3 *ngIf="!showLoader && hierarchyList.length === 0">no results</h3>
+
+  <span *ngFor="let item of hierarchyList; let i = index">
+      <a class="link-button" (click)="itemClicked(item) "> {{item.name}} </a>
+      <span *ngIf="i<hierarchyList.length -1"> &rarr;</span>
+    </span>
+</div>
+
